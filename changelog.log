@@ -1,2 +1,11 @@
+# v 0.2.0:
+  - added:
+    * #!/bin/python3
+    * imported sys
+    * added usage with arguments
+    * added syntax error message
+    * added KeyboardInterrupt
+  - improved:
+    * banner
 # v 0.1.0:
   - sps.py created
