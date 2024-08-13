@@ -1,4 +1,7 @@
 # v 0.2.0:
+  - fixes:
+    * coloring fixed
+# v 0.2.0:
   - added:
     * #!/bin/python3
     * imported sys
