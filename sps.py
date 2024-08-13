@@ -4,11 +4,14 @@ from datetime import datetime
 import sys
 
 # define enums
-VR = "0.2.0"
+VR = "0.2.1"
 AUTHOR = "UnderATK"
+
 # text coloring enums
+WHITE_TXT = "\033[0m"
 GREY_TXT = "\033[30m"
-ERR_TXT = "\033[31m[Error]"
+GRN_TXT = "\033[0;32m"
+ERR_TXT = "\033[31m"
 
 # define variables
 ###
@@ -36,11 +39,11 @@ def scanner(target):
             sock.close()
 
     except socket.gaierror:
-        print(f"{ERR_TXT} Hostname could not be resolved.")
+        print(f"{ERR_TXT}[Error] Hostname could not be resolved.")
         sys.exit()
 
     except socket.error:
-        print(f"{ERR_TXT} could not connet to the server.")
+        print(f"{ERR_TXT}[Error] could not connet to the server.")
         sys.exit()
 
     except KeyboardInterrupt:
@@ -58,7 +61,7 @@ if len(sys.argv) == 2:
     target = sys.argv[1]
     scanner(target)
 else: 
-    print(f"{ERR_TXT}Invalid amount of arguments.")
+    print(f"{ERR_TXT}[Error] Invalid amount of arguments.")
     print(f"{GREY_TXT}Syntax: python3 sps.py <ip/domain>")
     sys.exit()
 
