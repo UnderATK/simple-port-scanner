@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 import socket
 from datetime import datetime
 import sys
